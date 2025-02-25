@@ -6,7 +6,11 @@ const Projects = () => {
         <section className="flex flex-col gap-2">
           <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold flex  items-center gap-1">
             Isro web
-            <a href="https://isro.alphasquare.in/" className="cursor-pointer">
+            <a
+              href="https://isro.alphasquare.in/"
+              className="cursor-pointer"
+              target="_blank"
+            >
               <MdOutlineOpenInNew className=" text-cyan-400 dark:text-cyan-800" />
             </a>
           </h1>
@@ -28,6 +32,7 @@ const Projects = () => {
             <a
               href="https://www.car-rental.alphasquare.in/"
               className="cursor-pointer"
+              target="_blank"
             >
               <MdOutlineOpenInNew className=" text-cyan-400 dark:text-cyan-800" />
             </a>
