@@ -57,7 +57,14 @@ function App() {
         </section>
       </section>
       <section className="h-10 pl-56">
-        {"Made with </> by Shivam Sutar."}
+        {"Made with </> by Shivam Sutar. Inspired by "}
+        <a
+          href="https://yasio.dev/"
+          target="_blank"
+          className="text-cyan-400 dark:text-cyan-800"
+        >
+          Yasio
+        </a>
       </section>
       {show && <Modal setShow={setShow} />}
     </section>
