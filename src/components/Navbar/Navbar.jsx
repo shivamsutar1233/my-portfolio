@@ -10,8 +10,8 @@ const Navbar = ({ setTheme, theme }) => {
       </a>
       <section className="flex items-center space-x-2 text-sm">
         <StyledLink title={"Start"} />
-        <StyledLink title={"About"} />
         <StyledLink title={"Projects"} />
+        <StyledLink title={"About"} />
         <StyledLink title={"Contact"} />
       </section>
       <button

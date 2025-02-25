@@ -1,5 +1,10 @@
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Modal from "./components/Contact/Modal";
 import Navbar from "./components/Navbar/Navbar";
 import NavigationLine from "./components/Navigation/NavigationLine";
+import Projects from "./components/Projects/Projects";
+import Start from "./components/Start/Start";
 import React, { useMemo } from "react";
 function App() {
   const [theme, setTheme] = React.useState(
@@ -9,6 +14,7 @@ function App() {
       ? "dark"
       : "light"
   );
+  const [show, setShow] = React.useState(false);
 
   useMemo(() => {
     if (theme === "dark") {
@@ -23,33 +29,37 @@ function App() {
     <section className="app-container h-full min-h-screen bg-white text-black dark:bg-black dark:text-white relative">
       <Navbar setTheme={setTheme} theme={theme} />
       {/* section for start */}
-      <section id="Start" className=" relative">
+      <section id="Start" className=" relative pl-48">
         <NavigationLine title={"Start"} />
-        <section className="flex justify-center pt-10 h-screen">
-          <section className="text-3xl">Start</section>
-        </section>
-      </section>
-      {/* section for about */}
-      <section id="About" className=" relative">
-        <NavigationLine title={"About"} />
-        <section className="flex justify-center pt-10 h-screen">
-          <section className="text-3xl">About</section>
+        <section className="flex justify-center pt-10 ">
+          <Start />
         </section>
       </section>
       {/* section for projects */}
-      <section id="Projects" className=" relative">
+      <section id="Projects" className=" relative pl-48">
         <NavigationLine title={"Projects"} />
-        <section className="flex justify-center pt-10 h-screen">
-          <section className="text-3xl">Projects</section>
+        <section className="flex justify-center pt-10 ">
+          <Projects />
+        </section>
+      </section>
+      {/* section for about */}
+      <section id="About" className=" relative pl-28">
+        <NavigationLine title={"About"} />
+        <section className="flex justify-center pt-10">
+          <About theme={theme} />
         </section>
       </section>
       {/* section for contact */}
-      <section id="Contact" className=" relative">
+      <section id="Contact" className=" relative pl-48">
         <NavigationLine title={"Contact"} />
-        <section className="flex justify-center pt-10 h-screen">
-          <section className="text-3xl">Contact</section>
+        <section className="flex justify-center pt-10">
+          <Contact setShow={setShow} />
         </section>
       </section>
+      <section className="h-10 pl-56">
+        {"Made with </> by Shivam Sutar."}
+      </section>
+      {show && <Modal setShow={setShow} />}
     </section>
   );
 }
