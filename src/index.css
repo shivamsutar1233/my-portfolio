@@ -1,5 +1,6 @@
 @import "tailwindcss";
-body {
+@custom-variant dark (&:where(.dark, .dark *));
+body .app-container {
   @media (min-width: 1920px) {
     padding-inline: 15rem;
   }
