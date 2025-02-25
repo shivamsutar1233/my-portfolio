@@ -23,7 +23,7 @@ const Contact = ({ setShow }) => {
       </section>
       <section className="p-2">
         <button
-          className="border p-2 !rounded-full flex items-center justify-center cursor-pointer"
+          className="border p-2 !rounded-full flex items-center justify-center cursor-pointer bg-black dark:bg-white text-white dark:text-black hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-white"
           onClick={() => setShow(true)}
         >
           Get in Touch
