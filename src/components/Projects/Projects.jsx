@@ -1,10 +1,14 @@
+import { MdOutlineOpenInNew } from "react-icons/md";
 const Projects = () => {
   return (
     <section className=" w-full p-10 flex flex-col gap-5">
       <section className="flex flex-col gap-5">
         <section className="flex flex-col gap-2">
-          <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold">
+          <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold flex  items-center gap-1">
             Isro web
+            <a href="https://isro.alphasquare.in/" className="cursor-pointer">
+              <MdOutlineOpenInNew className=" text-cyan-400 dark:text-cyan-800" />
+            </a>
           </h1>
           {/* Short description of isro web project */}
           <p>
@@ -19,8 +23,14 @@ const Projects = () => {
       </section>
       <section className="flex flex-col gap-5">
         <section className="flex flex-col gap-2">
-          <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold">
+          <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold flex  items-center gap-1">
             Car Rental
+            <a
+              href="https://www.car-rental.alphasquare.in/"
+              className="cursor-pointer"
+            >
+              <MdOutlineOpenInNew className=" text-cyan-400 dark:text-cyan-800" />
+            </a>
           </h1>
           {/* Short description of car rental project */}
           <p>
