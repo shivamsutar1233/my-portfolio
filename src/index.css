@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+* {
+  scroll-behavior: smooth;
+}
 body .app-container {
   @media (min-width: 1920px) {
     padding-inline: 15rem;

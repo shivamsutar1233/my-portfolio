@@ -5,10 +5,7 @@ const Navbar = ({ setTheme, theme }) => {
     <section className="flex justify-between items-center p-4 text-2xl">
       <a href="/">
         <section className="flex items-baseline space-x-2">
-          Shivam Sutar{" "}
-          <span className="text-cyan-400 dark:text-cyan-800 flex text-2xl">
-            .
-          </span>
+          {"<"}Shivam Sutar{"/>"}
         </section>
       </a>
       <section className="flex items-center space-x-2 text-sm">
