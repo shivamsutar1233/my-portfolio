@@ -36,7 +36,7 @@ const Start = () => {
         <AiOutlineDotNet className="text-5xl" />
         <SiRedux className="text-5xl" />
       </section>
-      <section className="p-10">
+      <section className="px-10">
         <p className="text-2xl p-5 text-gray-400">Let me show you...</p>
       </section>
     </section>
