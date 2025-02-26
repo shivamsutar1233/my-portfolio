@@ -4,7 +4,13 @@
   scroll-behavior: smooth;
 }
 body .app-container {
+  @media (min-width: 1500px) {
+    padding-inline: 5rem;
+  }
   @media (min-width: 1700px) {
+    padding-inline: 10rem;
+  }
+  @media (min-width: 1900px) {
     padding-inline: 15rem;
   }
 }

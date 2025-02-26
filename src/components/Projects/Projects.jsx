@@ -1,7 +1,7 @@
 import { MdOutlineOpenInNew } from "react-icons/md";
 const Projects = () => {
   return (
-    <section className=" w-full p-10 flex flex-col gap-5">
+    <section className=" w-full sm:p-10 px-5 py-10 flex flex-col gap-5">
       <section className="flex flex-col gap-5">
         <section className="flex flex-col gap-2">
           <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold flex  items-center gap-1">
@@ -22,7 +22,7 @@ const Projects = () => {
         </section>
         <iframe
           src="https://isro.alphasquare.in/"
-          className="h-[35rem] w-full "
+          className="sm:h-[35rem] h-0 w-full "
         ></iframe>
       </section>
       <section className="flex flex-col gap-5">
@@ -45,7 +45,7 @@ const Projects = () => {
         </section>
         <iframe
           src="https://www.car-rental.alphasquare.in/"
-          className="h-[35rem] w-full"
+          className="sm:h-[35rem] h-0 w-full"
         ></iframe>
       </section>
     </section>
