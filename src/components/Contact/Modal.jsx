@@ -2,7 +2,7 @@ import { IoMdClose } from "react-icons/io";
 const Modal = ({ setShow }) => {
   return (
     <section className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-20">
-      <section className="bg-white w-full h-full p-10 flex flex-col gap-5 items-center relative">
+      <section className="bg-black w-full h-full p-10 flex flex-col gap-5 items-center relative ">
         <section className="flex justify-end items-center absolute right-10">
           <button
             className="border p-2 !rounded-full cursor-pointer"
