@@ -6,7 +6,10 @@ export const code = `class ShivamSutar {
   workExperience() {
     return [
       {
-        "2023-Present": "Programmer analyst at Cognizant",
+        "(March-2023)-(Sept-2025)": "Programmer analyst at Cognizant",
+      },
+      {
+        "(Sept-2025)-Present": "Associate at Cognizant",
       },
       //Many more to come
     ];
