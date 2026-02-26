@@ -34,7 +34,7 @@ export const code = `class ShivamSutar {
   }
   skills() {
     [
-      "React", "Node", ".Net", "Tailwindcss","Bootstrap", "C#", "SQL", "HTML", "CSS",
+      "Next.js", "React", "Node", ".Net", "Tailwindcss","Bootstrap", "C#", "SQL", "HTML", "CSS",
       "JavaScript", "Python", "Styled compoenents", "Material UI", "Redux", "Azure", "Git", "Docker",
     ];
   }
