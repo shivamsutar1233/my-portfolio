@@ -5,6 +5,28 @@ const Projects = () => {
       <section className="flex flex-col gap-5">
         <section className="flex flex-col gap-2">
           <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold flex  items-center gap-1">
+            Lean Angle Studio
+            <a
+              href="https://leananglestudio.shop/"
+              className="cursor-pointer"
+              target="_blank"
+            >
+              <MdOutlineOpenInNew className=" text-cyan-400 dark:text-cyan-800" />
+            </a>
+          </h1>
+          {/* Short description of isro web project */}
+          <p>
+            A full-stack gear rental e-commerce platform featuring role-based dashboards, real-time inventory and order management, secure document verification, and integrated payment processing.
+          </p>
+        </section>
+        <iframe
+          src="https://leananglestudio.shop/"
+          className="sm:h-[35rem] h-0 w-full "
+        ></iframe>
+      </section>
+      <section className="flex flex-col gap-5">
+        <section className="flex flex-col gap-2">
+          <h1 className="text-xl text-cyan-400 dark:text-cyan-800 font-semibold flex  items-center gap-1">
             Isro web
             <a
               href="https://isro.alphasquare.in/"
