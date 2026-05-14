@@ -4,7 +4,7 @@ import { FaJs } from "react-icons/fa";
 import { AiOutlineDotNet } from "react-icons/ai";
 import { SiRedux } from "react-icons/si";
 import { TypeAnimation } from "react-type-animation";
-import profileImg from "../../assets/profile.png";
+// import profileImg from "../../assets/profile.png";
 
 const Start = () => {
   return (
@@ -42,7 +42,7 @@ const Start = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative p-2 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10">
               <img
-                src={profileImg}
+                src={"https://ab2bbkrtuubturud.public.blob.vercel-storage.com/product_images/1778763632759-7lohdss-1772567889356.png"}
                 alt="Shivam Sutar"
                 className="w-64 md:w-72 h-auto max-h-[400px] object-cover rounded-xl shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-[1.02]"
               />

@@ -21,7 +21,7 @@ const Projects = () => {
         </section>
         <iframe
           src="https://leananglestudio.shop/"
-          className="sm:h-[35rem] h-0 w-full "
+          className="sm:h-[35rem] h-0 w-full border-2 border-cyan-400/20 dark:border-cyan-800/20 rounded-2xl shadow-2xl"
         ></iframe>
       </section>
       <section className="flex flex-col gap-5">
@@ -44,7 +44,7 @@ const Projects = () => {
         </section>
         <iframe
           src="https://isro.alphasquare.in/"
-          className="sm:h-[35rem] h-0 w-full "
+          className="sm:h-[35rem] h-0 w-full border-2 border-cyan-400/20 dark:border-cyan-800/20 rounded-2xl shadow-2xl"
         ></iframe>
       </section>
       <section className="flex flex-col gap-5">
@@ -67,7 +67,7 @@ const Projects = () => {
         </section>
         <iframe
           src="https://www.car-rental.alphasquare.in/"
-          className="sm:h-[35rem] h-0 w-full"
+          className="sm:h-[35rem] h-0 w-full border-2 border-cyan-400/20 dark:border-cyan-800/20 rounded-2xl shadow-2xl"
         ></iframe>
       </section>
     </section>
