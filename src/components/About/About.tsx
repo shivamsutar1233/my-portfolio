@@ -4,6 +4,7 @@ import { CodeBlock } from "react-code-block";
 import { themes } from "prism-react-renderer";
 import { code } from "./constantData";
 import { useTheme } from "@/context/ThemeContext";
+import { sectionHeadingClass } from "@/lib/styles";
 
 const About = () => {
   const { theme } = useTheme();
@@ -12,7 +13,7 @@ const About = () => {
       className=" w-full sm:p-10 py-10"
       aria-label="About Shivam Sutar, presented as a JavaScript class"
     >
-      <h2 id="about-heading" className="sr-only">
+      <h2 id="about-heading" className={`${sectionHeadingClass} mx-auto max-w-3xl`}>
         About
       </h2>
       <div className="mx-auto max-w-3xl overflow-hidden rounded-xl border border-black/10 shadow-xl dark:border-white/10">

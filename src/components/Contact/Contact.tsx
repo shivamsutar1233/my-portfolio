@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { siteConfig } from "@/lib/site-config";
-import { primaryButtonClass } from "@/lib/styles";
+import { iconChipClass, primaryButtonClass, sectionHeadingClass } from "@/lib/styles";
 import Modal from "./Modal";
 
 const Contact = () => {
@@ -17,29 +17,29 @@ const Contact = () => {
 
   return (
     <section className=" w-full sm:p-10 py-10">
-      <h2 id="contact-heading" className="sr-only">
+      <h2 id="contact-heading" className={sectionHeadingClass}>
         Contact
       </h2>
-      <section className="flex flex-wrap gap-5">
+      <section className="flex flex-wrap gap-3">
         <a
           href={siteConfig.linkedin}
-          className="flex items-center gap-2 rounded p-2 text-lg transition-colors hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 dark:hover:text-cyan-400"
+          className={`gap-2 px-4 py-2.5 text-sm font-medium hover:text-cyan-700 dark:hover:text-cyan-400 ${iconChipClass}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Shivam Sutar on LinkedIn (opens in a new tab)"
         >
-          <FaLinkedinIn aria-hidden="true" />
-          <span className="hidden sm:block">in/shivam-sutar-6a1b49170</span>
+          <FaLinkedinIn aria-hidden="true" className="text-lg" />
+          <span className="hidden sm:inline">in/shivam-sutar-6a1b49170</span>
         </a>
         <a
           href={siteConfig.github}
-          className="flex items-center gap-2 rounded p-2 text-lg transition-colors hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 dark:hover:text-cyan-400"
+          className={`gap-2 px-4 py-2.5 text-sm font-medium hover:text-cyan-700 dark:hover:text-cyan-400 ${iconChipClass}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Shivam Sutar on GitHub (opens in a new tab)"
         >
-          <FaGithub aria-hidden="true" />
-          <span className="hidden sm:block">github.com/shivamsutar1233</span>
+          <FaGithub aria-hidden="true" className="text-lg" />
+          <span className="hidden sm:inline">github.com/shivamsutar1233</span>
         </a>
       </section>
       <section className="p-2">

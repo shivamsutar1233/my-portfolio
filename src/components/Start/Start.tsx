@@ -7,6 +7,7 @@ import { AiOutlineDotNet } from "react-icons/ai";
 import { SiRedux } from "react-icons/si";
 import { TypeAnimation } from "react-type-animation";
 import { siteConfig } from "@/lib/site-config";
+import { iconChipClass } from "@/lib/styles";
 import Reveal from "@/components/shared/Reveal";
 
 const techIcons = [
@@ -71,15 +72,17 @@ const Start = () => {
         </div>
       </section>
       <Reveal
-        className="sm:p-10 sm:px-15 px-5 grid grid-cols-12 gap-8 mix-blend-luminosity hover:mix-blend-normal transition-all duration-500 opacity-50 hover:opacity-100"
+        className="sm:p-10 sm:px-15 px-5 grid grid-cols-3 sm:grid-cols-6 gap-3"
         y={10}
       >
         {techIcons.map(({ Icon, label }) => (
-          <Icon
+          <div
             key={label}
-            aria-label={label}
-            className="lg:text-5xl md:text-3xl sm:text-xl text-lg transition-transform duration-300 hover:scale-125 hover:-translate-y-0.5"
-          />
+            title={label}
+            className={`aspect-square p-3 text-gray-600 hover:text-cyan-700 dark:text-gray-300 dark:hover:text-cyan-400 ${iconChipClass}`}
+          >
+            <Icon aria-label={label} className="text-2xl sm:text-3xl" />
+          </div>
         ))}
       </Reveal>
       <Reveal className="sm:px-10 p-5" y={10} delay={0.1}>

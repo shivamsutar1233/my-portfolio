@@ -7,7 +7,7 @@ import {
   type FormEvent,
   type MouseEvent,
 } from "react";
-import { IoMdClose } from "react-icons/io";
+import { MdClose } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { CircularProgress } from "@mui/material";
 import { iconButtonClass, inputClass, primaryButtonClass } from "@/lib/styles";
@@ -112,7 +112,7 @@ const Modal = ({ show, onClose }: ModalProps) => {
               onClick={() => dialogRef.current?.close()}
               aria-label="Close"
             >
-              <IoMdClose />
+              <MdClose />
             </button>
           </div>
 

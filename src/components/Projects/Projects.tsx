@@ -1,6 +1,6 @@
 import { MdOutlineOpenInNew } from "react-icons/md";
 import Reveal from "@/components/shared/Reveal";
-import { cardClass } from "@/lib/styles";
+import { cardClass, sectionHeadingClass } from "@/lib/styles";
 import ProjectEmbed from "./ProjectEmbed";
 
 type Project = {
@@ -33,7 +33,7 @@ const projects: Project[] = [
 const Projects = () => {
   return (
     <section className=" w-full sm:p-10 px-5 py-10 flex flex-col gap-5">
-      <h2 id="projects-heading" className="sr-only">
+      <h2 id="projects-heading" className={sectionHeadingClass}>
         Projects
       </h2>
       {projects.map((project, index) => (
@@ -52,7 +52,7 @@ const Projects = () => {
                   <MdOutlineOpenInNew className="text-cyan-700 dark:text-cyan-400" />
                 </a>
               </h3>
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="max-w-2xl leading-relaxed text-gray-700 dark:text-gray-300">
                 {project.description}
               </p>
             </section>

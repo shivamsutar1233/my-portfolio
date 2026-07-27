@@ -19,3 +19,9 @@ export const cardClass =
 
 export const inputClass =
   "rounded-lg border border-black/10 bg-transparent p-2 transition-colors duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-cyan-600 disabled:opacity-60 dark:border-white/15";
+
+export const sectionHeadingClass =
+  "text-2xl md:text-3xl font-bold tracking-tight mb-4";
+
+export const iconChipClass =
+  "flex items-center justify-center rounded-xl border border-black/10 bg-black/[0.015] shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-md dark:border-white/15 dark:bg-white/[0.02]";

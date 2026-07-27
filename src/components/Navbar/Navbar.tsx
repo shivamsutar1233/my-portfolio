@@ -2,8 +2,7 @@
 
 import { Fragment, useState } from "react";
 import Link from "next/link";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
-import { IoIosMenu } from "react-icons/io";
+import { MdLightMode, MdDarkMode, MdMenu } from "react-icons/md";
 import { Divider, SwipeableDrawer } from "@mui/material";
 import StyledLink from "./StyledLink";
 import { useTheme } from "@/context/ThemeContext";
@@ -65,7 +64,7 @@ const Navbar = () => {
         aria-label="Open navigation menu"
         className="sm:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 rounded"
       >
-        <IoIosMenu className="md:text-3xl sm:text-xl text-lg sm:hidden cursor-pointer" />
+        <MdMenu className="md:text-3xl sm:text-xl text-lg sm:hidden cursor-pointer" />
       </button>
       <SwipeableDrawer
         anchor="top"
