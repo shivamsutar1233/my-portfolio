@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body .app-container {
+  @media (min-width: 1500px) {
+    padding-inline: 5rem;
+  }
+  @media (min-width: 1700px) {
+    padding-inline: 10rem;
+  }
+  @media (min-width: 1900px) {
+    padding-inline: 15rem;
+  }
+}
+
+/* A slow, gentle drift for ambient background elements — calmer and more
+   deliberate than the default bounce/ping-pong easing. */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -2.5rem, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-float {
+    animation: float 12s ease-in-out infinite;
+  }
+}
