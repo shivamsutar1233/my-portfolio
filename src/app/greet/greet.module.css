@@ -131,8 +131,8 @@
 
 .moonWrap {
   position: relative;
-  width: clamp(150px, 30vw, 260px);
-  height: clamp(150px, 30vw, 260px);
+  width: clamp(210px, 42vw, 360px);
+  height: clamp(210px, 42vw, 360px);
   -webkit-tap-highlight-color: transparent;
 }
 

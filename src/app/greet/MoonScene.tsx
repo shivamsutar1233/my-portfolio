@@ -45,7 +45,12 @@ function MoonSphere({ onActivate }: MoonSphereProps) {
   return (
     <mesh onPointerDown={handlePointerDown} onPointerUp={handlePointerUp}>
       <sphereGeometry args={[1, 64, 64]} />
-      <meshStandardMaterial map={texture} roughness={1} metalness={0} />
+      <meshStandardMaterial
+        map={texture}
+        color="#ffdf9b"
+        roughness={1}
+        metalness={0}
+      />
     </mesh>
   );
 }
@@ -58,13 +63,16 @@ type MoonSceneProps = {
 const MoonScene = ({ onActivate, reducedMotion }: MoonSceneProps) => {
   return (
     <Canvas
-      camera={{ position: [0, 0, 2.6], fov: 40 }}
+      // Sphere radius is 1; at fov 40 the visible half-height at distance d
+      // is tan(20deg)*d, which must exceed the radius or the sphere clips
+      // against the canvas edges. 3.6 leaves comfortable margin.
+      camera={{ position: [0, 0, 3.6], fov: 40 }}
       gl={{ alpha: true, antialias: true }}
       dpr={[1, 2]}
       style={{ cursor: "grab", touchAction: "none" }}
     >
-      <ambientLight intensity={0.4} />
-      <directionalLight position={[-3, 1.6, 4]} intensity={2} />
+      <ambientLight intensity={0.5} color="#ffe9bd" />
+      <directionalLight position={[-3, 1.6, 4]} intensity={2.4} color="#fff1cf" />
       <Suspense fallback={null}>
         <MoonSphere onActivate={onActivate} />
       </Suspense>
