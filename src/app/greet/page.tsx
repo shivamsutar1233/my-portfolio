@@ -46,7 +46,7 @@ export default function GreetPage() {
 
           <h1 className={styles.heroTitle}>Happy Guru Pournima</h1>
 
-          <p className={styles.tagline}>A light, for the ones who lit ours.</p>
+          <p className={styles.tagline}>A light, for the one who lit mine.</p>
 
           <a href="#shloka" className={styles.scrollHint} aria-label="Scroll to see the guru shloka">
             <MdKeyboardArrowDown aria-hidden="true" />
@@ -87,21 +87,21 @@ export default function GreetPage() {
             <p className={styles.label}>a word of thanks</p>
             <div className={styles.message}>
               <p>
-                To every teacher who ever turned a page of confusion into a
-                page of understanding —
+                To you, who turned a page of my confusion into a page of
+                understanding —
               </p>
               <p>
-                Guru Pournima is the one day set aside to say what we too
-                rarely say: thank you. Not only for what was taught, but for
-                how it was given — the patience when we were slow, the{" "}
-                <em>belief</em> when we doubted ourselves, the quiet
-                correction we only understood years later.
+                Guru Pournima is the one day set aside to say what I too
+                rarely say: thank you. Not only for what you taught me, but for
+                how it was given — your patience when I was slow, your{" "}
+                <em>belief</em> when I doubted myself, and the quiet
+                guidance I only truly understood years later.
               </p>
               <p>
-                Whatever we go on to build, we build standing on ground you
+                Whatever I go on to build, I build standing on the ground you
                 shaped first.
               </p>
-              <p className={styles.bow}>Today, we bow to that.</p>
+              <p className={styles.bow}>Today, I bow to you with gratitude.</p>
             </div>
           </div>
         </section>
