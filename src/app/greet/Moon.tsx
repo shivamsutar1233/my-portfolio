@@ -72,7 +72,6 @@ const Moon = () => {
   return (
     <div className={styles.moonStage} ref={stageRef}>
       <div className={styles.moonWrap}>
-        <span className={styles.moonGlow} aria-hidden="true"></span>
         <MoonScene onActivate={handleActivate} reducedMotion={reducedMotion} />
         {/* pointer-events: none so mouse/touch reach the canvas underneath
             for drag-to-rotate; keyboard users can still Tab + Enter here. */}
