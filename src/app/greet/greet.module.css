@@ -140,6 +140,22 @@
   outline: none;
 }
 
+/* A soft, low-opacity halo — box-shadow only, no filled disc — so there's
+   nothing with hard edges to read as a background or a ring behind the
+   sphere. Roughly matches the sphere's true edge (~85% of the container). */
+.moonGlow {
+  position: absolute;
+  inset: 9%;
+  border-radius: 50%;
+  box-shadow: 0 0 34px 6px rgba(246, 214, 150, 0.16);
+  animation: glow 7s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 34px 6px rgba(246, 214, 150, 0.16); }
+  50% { box-shadow: 0 0 42px 9px rgba(246, 214, 150, 0.22); }
+}
+
 .moonLoading {
   position: absolute;
   inset: 14%;
@@ -377,7 +393,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .flame, .miniFlame {
+  .flame, .miniFlame, .moonGlow {
     animation: none !important;
   }
 }
