@@ -78,6 +78,7 @@
 /* ---------- Hero ---------- */
 
 .hero {
+  position: relative;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -86,6 +87,38 @@
   text-align: center;
   padding: 4rem 1.5rem 3rem;
   gap: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.scrollHint {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1rem, 4vh, 2.5rem);
+  display: inline-flex;
+  padding: 0.25rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--ink-faint);
+  border-radius: 999px;
+  transform: translateX(-50%);
+  transition: color 0.3s ease-out;
+}
+.scrollHint:hover {
+  color: var(--gold);
+}
+.scrollHint:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scrollHint {
+    animation: scrollHintBounce 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollHintBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
 }
 
 .diya {

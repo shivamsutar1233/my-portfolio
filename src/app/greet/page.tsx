@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Orbitron, Plus_Jakarta_Sans } from "next/font/google";
 import Link from "next/link";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import styles from "./greet.module.css";
 import Embers from "./Embers";
 import Moon from "./Moon";
@@ -46,9 +47,13 @@ export default function GreetPage() {
           <h1 className={styles.heroTitle}>Happy Guru Pournima</h1>
 
           <p className={styles.tagline}>A light, for the ones who lit ours.</p>
+
+          <a href="#shloka" className={styles.scrollHint} aria-label="Scroll to see the guru shloka">
+            <MdKeyboardArrowDown aria-hidden="true" />
+          </a>
         </section>
 
-        <section className={styles.shlokaSection}>
+        <section id="shloka" className={styles.shlokaSection}>
           <div className={styles.wrap}>
             <p className={styles.label}>गुरु श्लोक &middot; the guru shloka</p>
             <div className={styles.plaque}>
