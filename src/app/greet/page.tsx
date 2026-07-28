@@ -3,6 +3,7 @@ import { Orbitron, Plus_Jakarta_Sans } from "next/font/google";
 import Link from "next/link";
 import styles from "./greet.module.css";
 import Embers from "./Embers";
+import Moon from "./Moon";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function GreetPage() {
             <div className={styles.diyaBase}></div>
           </div>
 
-          <div className={styles.moon} aria-hidden="true"></div>
+          <Moon />
 
           <p className={styles.eyebrow}>
             आषाढ़ पूर्णिमा
