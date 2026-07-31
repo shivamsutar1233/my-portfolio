@@ -2,6 +2,7 @@
 
 import { Fragment, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MdLightMode, MdDarkMode, MdMenu } from "react-icons/md";
 import { Divider, SwipeableDrawer } from "@mui/material";
 import StyledLink from "./StyledLink";
@@ -14,6 +15,9 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [showSideBar, setShowSideBar] = useState(false);
   const activeId = useActiveSection(SECTION_IDS);
+  // The sections only exist on the home page, so scroll-spy highlighting is
+  // meaningless anywhere else — but the links still need to work from there.
+  const isHome = usePathname() === "/";
 
   const getNavLinks = () => (
     <Fragment>
@@ -21,8 +25,9 @@ const Navbar = () => {
         <StyledLink
           key={title}
           title={title}
+          href={`/#${title}`}
           onClick={setShowSideBar}
-          isActive={activeId === title}
+          isActive={isHome && activeId === title}
         />
       ))}
     </Fragment>
