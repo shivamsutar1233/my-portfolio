@@ -40,20 +40,20 @@ const Navbar = () => {
       className="p-2 bg-gray-200 dark:bg-gray-800 rounded-full shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-300 dark:hover:bg-gray-700 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
     >
       {theme === "light" ? (
-        <MdDarkMode className="text-black md:text-3xl sm:text-xl text-lg" />
+        <MdDarkMode className="text-black text-lg sm:text-xl" />
       ) : (
-        <MdLightMode className=" dark:text-white md:text-3xl sm:text-xl text-lg" />
+        <MdLightMode className=" dark:text-white text-lg sm:text-xl" />
       )}
     </button>
   );
 
   return (
-    <header className="sticky top-0 z-10 flex justify-between items-center p-4 text-2xl bg-white/80 text-black backdrop-blur-md border-b border-black/5 dark:border-white/10 dark:bg-black/80 dark:text-white">
+    <header className="sticky top-0 z-10 flex justify-between items-center p-4 text-base bg-white/80 text-black backdrop-blur-md border-b border-black/5 dark:border-white/10 dark:bg-black/80 dark:text-white">
       <Link
         href="/"
         className="rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
       >
-        <span className="flex items-baseline lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold space-x-2">
+        <span className="flex items-baseline text-lg sm:text-xl md:text-2xl font-bold space-x-2">
           {"<"}Shivam Sutar{"/>"}
         </span>
       </Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
         aria-label="Open navigation menu"
         className="sm:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 rounded"
       >
-        <MdMenu className="md:text-3xl sm:text-xl text-lg sm:hidden cursor-pointer" />
+        <MdMenu className="text-xl sm:hidden cursor-pointer" />
       </button>
       <SwipeableDrawer
         anchor="top"
