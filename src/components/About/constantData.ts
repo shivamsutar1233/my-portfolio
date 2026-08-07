@@ -38,4 +38,11 @@ export const code = `class ShivamSutar {
       "JavaScript", "Python", "Styled compoenents", "Material UI", "Redux", "Azure", "Git", "Docker",
     ];
   }
+  certifications() {
+    return [
+      "Microsoft Certified: Azure Fundamentals",
+      "Claude Certified Architect – Foundations (Anthropic)",
+      //Many more to come
+    ];
+  }
 }`;

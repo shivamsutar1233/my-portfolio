@@ -5,6 +5,7 @@ import { themes } from "prism-react-renderer";
 import { code } from "./constantData";
 import { useTheme } from "@/context/ThemeContext";
 import { sectionHeadingClass } from "@/lib/styles";
+import Certifications from "@/components/Certifications/Certifications";
 
 const About = () => {
   const { theme } = useTheme();
@@ -46,6 +47,7 @@ const About = () => {
           </CodeBlock.Code>
         </CodeBlock>
       </div>
+      <Certifications />
     </section>
   );
 };
