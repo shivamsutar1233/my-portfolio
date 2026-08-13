@@ -62,30 +62,48 @@ const Modal = ({ show, onClose }: ModalProps) => {
     e.preventDefault();
     setIsLoading(true);
     setStatus("idle");
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    // Same payload feeds both templates — see email-templates/README.md for
+    // the variable schema each template expects.
+    const templateParams = {
+      from_name: from,
+      to_name: "Shivam",
+      message: message,
+      reply_to: replyTo,
+    };
+
+    Promise.allSettled([
+      emailjs.send(
+        serviceId,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: from,
-          to_name: "Shivam",
-          message: message,
-          reply_to: replyTo,
-        },
-        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }
-      )
-      .then(
-        () => {
+        templateParams,
+        { publicKey }
+      ),
+      emailjs.send(
+        serviceId,
+        process.env.NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE_ID!,
+        templateParams,
+        { publicKey }
+      ),
+    ])
+      .then(([notification, autoReply]) => {
+        // The notification reaching Shivam is what actually matters; an
+        // auto-reply hiccup shouldn't tell the visitor their message failed.
+        if (notification.status === "fulfilled") {
           setStatus("success");
           setFrom("");
           setReplyTo("");
           setMessage("");
-        },
-        (error) => {
-          console.error("Error sending message", error);
+        } else {
+          console.error("Error sending message", notification.reason);
           setStatus("error");
         }
-      )
+        if (autoReply.status === "rejected") {
+          console.error("Auto-reply failed to send", autoReply.reason);
+        }
+      })
       .finally(() => {
         setIsLoading(false);
       });
